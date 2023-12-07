@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Votre Portfolio</title>
+</head>
+<body>
+    <header id="header">
+        <div class="container"> 
+            <nav>
+                <img src="./images/logos.png" class="logo" alt="Logo">
+                <ul>
+                    <li>
+                        <a href="#" class="tab-link" data-tab="home" onclick="opentab('home')">Home</a>
+                    </li>
+                    <li>
+                        <a href="#" class="tab-link" data-tab="about" onclick="opentab('about')">About</a>
+                        <ul class="submenu">
+                            <li><a href="#" class="sub-link" data-tab="about-me" onclick="opentab('about-me')">About Me</a></li>
+                            <li><a href="#" class="sub-link" data-tab="soft-skills" onclick="opentab('soft-skills')">Soft Skills</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#" class="tab-link" data-tab="skills" onclick="opentab('skills')">Skills</a></li>
+                    <li><a href="#" class="tab-link" data-tab="projects" onclick="opentab('projects')">Projects</a></li>
+                    <li><a href="#" class="tab-link" data-tab="contact" onclick="opentab('contact')">Contact</a></li>
+                    <li><a href="#" class="tab-link" data-tab="cv" onclick="opentab('cv')">Cv</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>I share my passion</p>
+                <h1>Hello, I'm <span>Roseline</span><br>Master's Student</h1>
+            </div>
+        </div>
+    </header>
+    
+    <section id="home" class="tab-contents">
+        <div class="container">
+            <h1 class="sub-title">Welcome to My Portfolio</h1>
+            <!-- Ajoutez le contenu de la page d'accueil ici -->
+            <p>Bienvenue sur mon portfolio.</p>
+        </div>
+    </section>
+
+    <section id="about" class="tab-contents">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="./images/profile-pic.png" alt="Profile Picture">
+                </div>               
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1> 
+                    <p>
+                        I am Roseline MONTHE WOUENDEU, a Master's student in Software Architecture and Application Development at Etna.
+                        Passionate about software development, I am looking for an internship in full-stack development within an innovative company.
+                        I am motivated by the opportunity to practice my skills in a professional environment, to contribute to the success of the company,
+                        and to continually learn within a dynamic team.
+                    </p>
+                    <h1 class="sub-title">Soft Skills</h1>
+                    <div class="skills-list">
+                        <!-- Ajoutez vos compétences en soft skills ici -->
+                        <p>Curious</p>
+                        <p>Autonomous</p>
+                        <p>Worker</p>
+                        <p>Perfectionist</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="tab-contents">
+        <div class="container">
+            <h1 class="sub-title">Skills</h1>
+            <div class="skills-list">
+                <!-- Langages de programmation -->
+                <p><a href="https://www.python.org/doc/" target="_blank"><img src="python.png" alt="Python Logo"> Python</a></p>
+                <p><a href="https://developer.mozilla.org/fr/docs/Web/JavaScript" target="_blank"><img src="javascript.png" alt="JavaScript Logo"> JavaScript</a></p>
+                <p><a href="https://www.typescriptlang.org/docs/" target="_blank"><img src="typescript.png" alt="TypeScript Logo"> TypeScript</a></p>
+                <p><a href="https://developer.mozilla.org/fr/docs/Web/HTML" target="_blank"><img src="html.png" alt="HTML Logo"> HTML</a></p>
+                <p><a href="https://developer.mozilla.org/fr/docs/Web/CSS"><img src="css.png" alt="CSS Logo"> CSS</a></p>
+                <p><a href="https://www.php.net/docs.php" target="_blank"><img src="php.png" alt="PHP Logo"> PHP</a></p>
+                <p><a href="https://docs.oracle.com/en/java/" target="_blank"><img src="java.png" alt="Java Logo"> Java</a></p>
+                <p><a href="https://nodejs.org/docs/latest/api/" target="_blank"><img src="node.png" alt="Node.js Logo"> Node.js</a></p>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="tab-contents">
+        <div class="container">
+            <h1 class="sub-title">Projects</h1>
+            <ul>
+                <li>BUBBLE MY TEA</li>
+                <li>THE HYRULE CASTLE</li>
+                <li>MY IRC</li>
+                <li>RUSH LAPIN</li>
+                <li>API</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="contact" class="tab-contents">
+        <div class="container">
+            <h1 class="sub-title">Contact</h1>
+            <!-- Ajoutez vos informations de contact ici -->
+            <p>Email: roselinemonthe4@gmail.com</p>
+            <p>Phone: 0768547921</p>
+            <p>Courbevoie: 92400</p>
+        </div>
+    </section>
+
+    <section id="cv" class="tab-contents">
+        <div class="container">
+            <h1 class="sub-title">Curriculum Vitae (Cv)</h1>
+            <!-- Ajoutez le contenu de votre CV ici -->
+            <p>Contenu du CV</p>
+        </div>
+    </section>
+
+    <script>
+    var tablinks = document.querySelectorAll(".tab-link, .sub-link");
+    var tabcontents = document.querySelectorAll(".tab-contents");
+
+    function opentab(tabname) {
+        tablinks.forEach(tablink => tablink.classList.remove("active-link"));
+        tabcontents.forEach(tabcontent => tabcontent.classList.remove("active-tab"));
+
+        var selectedTab = document.querySelector('.tab-link[data-tab="' + tabname + '"]');
+        if (!selectedTab) {
+            selectedTab = document.querySelector('.sub-link[data-tab="' + tabname + '"]');
+        }
+        selectedTab.classList.add("active-link");
+
+        var selectedContent = document.getElementById(tabname);
+        selectedContent.classList.add("active-tab");
+    }
+    </script>
+
+</body>
+</html>
+
