@@ -4,47 +4,33 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My personal portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <title>Votre Portfolio</title>
+    <script src="https:kit.fontawesome.com/c425e24a8.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <header id="header">
+    <div id="header">
         <div class="container"> 
             <nav>
                 <img src="./images/logos.png" class="logo" alt="Logo">
-                <ul>
-                    <li>
-                        <a href="#" class="tab-link" data-tab="home" onclick="opentab('home')">Home</a>
-                    </li>
-                    <li>
-                        <a href="#" class="tab-link" data-tab="about" onclick="opentab('about')">About</a>
-                        <ul class="submenu">
-                            <li><a href="#" class="sub-link" data-tab="about-me" onclick="opentab('about-me')">About Me</a></li>
-                            <li><a href="#" class="sub-link" data-tab="soft-skills" onclick="opentab('soft-skills')">Soft Skills</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#" class="tab-link" data-tab="skills" onclick="opentab('skills')">Skills</a></li>
-                    <li><a href="#" class="tab-link" data-tab="projects" onclick="opentab('projects')">Projects</a></li>
-                    <li><a href="#" class="tab-link" data-tab="contact" onclick="opentab('contact')">Contact</a></li>
-                    <li><a href="#" class="tab-link" data-tab="cv" onclick="opentab('cv')">Cv</a></li>
+                <ul id="sidmenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#cv">Cv</a></li>
+                    <i class="fas fa-times" onclick="closemenu()"></i>
                 </ul>
+                <i class="fas fa-bars" onclick="openmenu()"></i>
             </nav>
             <div class="header-text">
-                <p>I share my passion</p>
+                <p>Fullstack developer</p>
                 <h1>Hello, I'm <span>Roseline</span><br>Master's Student</h1>
             </div>
         </div>
-    </header>
-    
-    <section id="home" class="tab-contents">
-        <div class="container">
-            <h1 class="sub-title">Welcome to My Portfolio</h1>
-            <!-- Ajoutez le contenu de la page d'accueil ici -->
-            <p>Bienvenue sur mon portfolio.</p>
-        </div>
-    </section>
-
-    <section id="about" class="tab-contents">
+    </div>
+    <div id="about">
         <div class="container">
             <div class="row">
                 <div class="about-col-1">
@@ -52,92 +38,194 @@
                 </div>               
                 <div class="about-col-2">
                     <h1 class="sub-title">About Me</h1> 
-                    <p>
-                        I am Roseline MONTHE WOUENDEU, a Master's student in Software Architecture and Application Development at Etna.
-                        Passionate about software development, I am looking for an internship in full-stack development within an innovative company.
-                        I am motivated by the opportunity to practice my skills in a professional environment, to contribute to the success of the company,
-                        and to continually learn within a dynamic team.
-                    </p>
-                    <h1 class="sub-title">Soft Skills</h1>
-                    <div class="skills-list">
-                        <!-- Ajoutez vos compétences en soft skills ici -->
-                        <p>Curious</p>
-                        <p>Autonomous</p>
-                        <p>Worker</p>
-                        <p>Perfectionist</p>
+                    <p>Je suis Roseline MONTHE WOUENDEU, étudiante en Master Architecture Logicielle et Développement d'Applications à l'Etna. Passionné par le développement logiciel, je suis à la recherche d'un contrat d'apprentissage de deux ans en tant que développeur full-stack au sein d'une entreprise innovante. Je suis motivé par l'opportunité de mettre en pratique mes compétences dans un environnement professionnel, de contribuer au succès de l'entreprise et d'apprendre continuellement au sein d'une équipe dynamique.</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('soft-skills')">Soft Skills</p>
+                        <p class="tab-links" onclick="opentab('professional experiences')">Professional Experiences</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents" id="soft-skills">
+                        <ul>
+                            <li><span>AUTONOME</span><br></li>
+                            <li><span>CURIEUSE</span><br></li>
+                            <li><span>TENACE</span><br></li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="professional experiences">
+                        <ul>
+                            <li><span>TECHNICIENNE EN INFORMATIQUE DOUALA-CAMEROUN IUC(Avril-Juillet 2021)</span><br>Mettre en place d'une plateforme web pour la gestion de facturation et expedition client, Developpement d'un système de gestion de base de données permettant aux utilisateurs de stocker et de recuperer les donées; Concevoir et developper des applications et des systèmes logiciels pour repondre aux besoins des clients. </li>
+                            <li><span>ASSISTANTE PROJET INFORMATIQUE DOUALA-CAMEROUN MTN (Janvier-juin 2020)</span><br>Analyser les besoins des clients et definir les solution informatique adaptées; Maintenance des systèmes informatiques exixtant.</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents active-tab" id="education">
+                        <ul>
+                            <li><span>ETNA, IVRY-SUR-SEINE(OCTOBRE 2023-OCTOBRE 2025)</span><br>Master Architecte Logiciel, Développeur D'application.</li>
+                            <li><span>ECOLE-IT, ORLEANS (OCTOBRE 2022-JUILLET 2023)</span><br>Master Expert Systèmes Informatiques</li>
+                            <li><span>ECOLE-IT, ORLEANS (OCTOBRE 2021-JUILLET 2022)</span><br>Bachelor Expert Systèmes Informatiques</li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
-
-    <section id="skills" class="tab-contents">
+    </div>
+    <!-----------------skills--------------->
+    <div id="skills">
         <div class="container">
-            <h1 class="sub-title">Skills</h1>
-            <div class="skills-list">
-                <!-- Langages de programmation -->
-                <p><a href="https://www.python.org/doc/" target="_blank"><img src="python.png" alt="Python Logo"> Python</a></p>
-                <p><a href="https://developer.mozilla.org/fr/docs/Web/JavaScript" target="_blank"><img src="javascript.png" alt="JavaScript Logo"> JavaScript</a></p>
-                <p><a href="https://www.typescriptlang.org/docs/" target="_blank"><img src="typescript.png" alt="TypeScript Logo"> TypeScript</a></p>
-                <p><a href="https://developer.mozilla.org/fr/docs/Web/HTML" target="_blank"><img src="html.png" alt="HTML Logo"> HTML</a></p>
-                <p><a href="https://developer.mozilla.org/fr/docs/Web/CSS"><img src="css.png" alt="CSS Logo"> CSS</a></p>
-                <p><a href="https://www.php.net/docs.php" target="_blank"><img src="php.png" alt="PHP Logo"> PHP</a></p>
-                <p><a href="https://docs.oracle.com/en/java/" target="_blank"><img src="java.png" alt="Java Logo"> Java</a></p>
-                <p><a href="https://nodejs.org/docs/latest/api/" target="_blank"><img src="node.png" alt="Node.js Logo"> Node.js</a></p>
+           <h1 class="sub-title">My Skills</h1>
+           <div class="skills-list">
+            <div>
+                <i class="fas fa-code"></i>
+               <h2>Langages de programmation</h2>
+               <p>java</p> 
+               <a href="#">https://docs.oracle.com/en/java/</a>
+               <p>css</p> 
+               <a href="#">Learn more</a>
+               <p>javascript</p> 
+               <a href="#">Learn more</a>
+               <p>php</p>
+               <a href="#">Learn more</a>
+               <p>python</p> 
+               <a href="#">Learn more</a>
+               <p>typescript</p> 
+               <a href="#">Learn more</a>
             </div>
+            <div>
+                <i class="fas fa-crop-alt"></i>
+               <h2>Framework</h2>
+               <p>angular</p> 
+               <a href="#">Learn more</a>
+            </div>
+            <div>
+               <h2>Base de données</h2>
+               <p>SQL</p> 
+               <a href="#">Learn more</a>
+            </div>
+           </div>
         </div>
-    </section>
-
-    <section id="projects" class="tab-contents">
-        <div class="container">
-            <h1 class="sub-title">Projects</h1>
-            <ul>
-                <li>BUBBLE MY TEA</li>
-                <li>THE HYRULE CASTLE</li>
-                <li>MY IRC</li>
-                <li>RUSH LAPIN</li>
-                <li>API</li>
-            </ul>
+    </div>
+<!-----------------projects---------------->
+<div id="projects">
+    <div class="container">
+        <h1 class="sub-title">My work</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="images/cafe tea.png">
+                <div class="layer">
+                    <h3>Bubble My Tea</h3>
+                    <p>Developpement d'un site web e-commerce permettant de commander des Bubble tea avec Laravel.</p>
+                    <a href="#"><i class="fas fa-external-link-alt"></i></a>  
+                </div>
         </div>
-    </section>
-
-    <section id="contact" class="tab-contents">
-        <div class="container">
-            <h1 class="sub-title">Contact</h1>
-            <!-- Ajoutez vos informations de contact ici -->
-            <p>Email: roselinemonthe4@gmail.com</p>
-            <p>Phone: 0768547921</p>
-            <p>Courbevoie: 92400</p>
+         <div class="work">
+                <img src="images/castle.png">
+                <div class="layer">
+                    <h3>The Hyrule Castle</h3>
+                    <p>Contruire un RPG avec Typescript.</p>
+                    <a href="#"><i class="fas fa-external-link-alt"></i></a>  
+                </div>
         </div>
-    </section>
-
-    <section id="cv" class="tab-contents">
-        <div class="container">
-            <h1 class="sub-title">Curriculum Vitae (Cv)</h1>
-            <!-- Ajoutez le contenu de votre CV ici -->
-            <p>Contenu du CV</p>
+         <div class="work">
+                <img src="images/irc.png">
+                <div class="layer">
+                    <h3>My IRC</h3>
+                    <p>Creation d'un serveur Expressjs, Gestion des messages avec socket.io et Html et des Users.</p>
+                    <a href="#"><i class="fas fa-external-link-alt"></i></a>  
+                </div>   
         </div>
-    </section>
+         <div class="work">
+                <img src="images/api.png">
+                <div class="layer">
+                    <h3>API</h3>
+                    <p>Creation d'une api de gestion de produits liés a une base de données avec python/flask.</p>
+                    <a href="#"><i class="fas fa-external-link-alt"></i></a>  
+                </div>
+        </div>
+    </div>
+    <a href="#" class="btn">See More</a>
+    </div>
+</div>
+<!---------------contact-------------->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fas fa-paper-plane"></i>
+                    roselinemonthe4@gmail.com</p>
+                <p><i class="fas fa-phone-square-alt"></i> 0758547921</p>
+                <div class="social-icons">
+                    <a href="https://facebook.com/"><i class="fab fa-facebook"></i></a>
+                    <a href="https://github.com/dolvyramonthe"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/roseline-monthe-wouendeu-067041204/"><i class="fab fa-linkedin"></i></a>
+                </div>
+                <a href="images/mycv.pdf" download class="btn btn2">Download CV</a>
 
-    <script>
-    var tablinks = document.querySelectorAll(".tab-link, .sub-link");
-    var tabcontents = document.querySelectorAll(".tab-contents");
+            </div>
+             <div class="contact-right"></div>
+             <form name="submit-to-google-sheet">
+               <input type="text" name="Name" placeholder="Your Name" required> 
+               <input type="email" name="email" placeholder="Your Email" required>
+               <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+               <buttom type="submit" class="btn btn2">Submit</buttom>
+             </form>
+             <span id="msg"></span>
+        </div>
+    </div>
+</div>
+<div class="copyright">
+    <p>copyright Roseline. Made wtih <i class="fas fa-heart"></i>html and css</p>
+</div>
+</div>
+<script>
 
-    function opentab(tabname) {
-        tablinks.forEach(tablink => tablink.classList.remove("active-link"));
-        tabcontents.forEach(tabcontent => tabcontent.classList.remove("active-tab"));
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents"); 
 
-        var selectedTab = document.querySelector('.tab-link[data-tab="' + tabname + '"]');
-        if (!selectedTab) {
-            selectedTab = document.querySelector('.sub-link[data-tab="' + tabname + '"]');
+     function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
         }
-        selectedTab.classList.add("active-link");
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+     }
 
-        var selectedContent = document.getElementById(tabname);
-        selectedContent.classList.add("active-tab");
-    }
-    </script>
+</script>
+
+<script>
+   
+   var sidemeu = document.getElementById("sidemenu")
+
+   function openmenu(){
+        sidemeu.style.right = "0";
+   }
+   function closemenu(){
+        sidemeu.style.right = "-200px";
+
+   }
+</script>
+<script>
+    const scriptURL ='https://script.google.com/macros/s/AKfycbwAfAvFLhtG4bDpP1UP-LjXDztRbNuEWXl50pqZ50HAc1E90bIkQaOxmP7JTYnAjU4/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+
+    form.addEventListener('submit', e =>{
+        e.preventDefault()
+        fetch(scriptURL, {method: 'POST', body: new FormData(form)})
+          .then(response => {
+           msg.innerHTML = "Message sent successfully"
+           setTimeout(function(){
+            msg.innerHTML = ""
+           },5000)
+           form.reset()
+          })
+          .catch(error => console.error('Error!', error.message))
+
+    })
+</script>
 
 </body>
-</html>
 
+</html>
