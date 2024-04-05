@@ -21,6 +21,11 @@ html{
     background-size: cover;
     background-position: center;
 }
+
+.skill img {
+    width: 50%;
+    height: 36%;
+}
 .container {
     padding: 10px 10%;
 }
